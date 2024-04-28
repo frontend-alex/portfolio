@@ -106,7 +106,7 @@
 #headerText {
   line-height: 60px;
   transform: translateY(0px);
-  line-height: 150px;
+  line-height: 130px;
 }
 
 #headerText > div {
@@ -463,5 +463,23 @@
   }
   .footer-container .footer-data .box-2 span::after{
       display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #headerText {
+    line-height: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #headerText {
+    line-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #headerText {
+    line-height: 5rem;
   }
 }

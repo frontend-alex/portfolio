@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <HeaderSection />
       {/* end of header*/}
-      <div className="max-w-7xl mx-auto flex flex-col gap-56">
+      <div className="max-w-7xl px-5 2xl:px-0 mx-auto flex flex-col gap-56">
         <FirstSection />
 
         <HorizontalScrollSection />

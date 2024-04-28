@@ -24,27 +24,27 @@ export const navbarLinks = [
 export const galleryData = [
     {
       src: '/images/project-1.png',
-      title: "PlatinumShorts",
+      title: "GlobalTech",
       subtitle: "Learn More",
-      category: "React / Gsap / TailwindCss",
-      link: "https://platinumshorts.com/",
+      category: "HTML5 / Bootstrap / CSS3",
+      link: "https://globaltech.bg/",
       color: '#DF3B89'
+    },
+    {
+      src: '/images/project-3.png',
+      title: "Milenium",
+      subtitle: "Learn More",
+      category: "HTML5 / Bootstrap / CSS3",
+      link: "https://milleniumbg.xvi-soft.com/",
+      color: '#CD161A'
     },
     {
       src:' /images/project-2.png',
       title: "XV-soft",
       subtitle: "Learn More",
       category: "HTMX / Tailwind ",
-      link: "https://e-comerce-mern-rho.vercel.app/",
-      color: '#0982A5'
-    },
-    {
-      src: '/images/project-3.png',
-      title: "Milenium",
-      subtitle: "Learn More",
-      category: "HTMX / Tailwind",
       link: "",
-      color: '#CD161A'
+      color: '#0982A5'
     },
   ];
 

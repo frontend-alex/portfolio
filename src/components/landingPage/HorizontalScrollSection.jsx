@@ -11,23 +11,20 @@ import StarShape from "@svgs/StarShape";
 import { Button } from "../ui/button";
 import AnimatedButton from "../ui/animated-button";
 
-gsap.registerPlugin(ScrollTrigger);
 
+import Link from "next/link";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const GalleryItem = ({
   src,
   category,
-  subtitle,
   title,
-  index,
   link,
-  color
 }) => {
   const ref = useRef(null);
 
   const onScreen = useOnScreen(ref, 0.5);
-
-
 
   return (
     <div
@@ -40,7 +37,7 @@ export const GalleryItem = ({
           <h1 className={`gallery-info-title mix-blend-difference`}>{title}</h1>
           <p className="gallery-info-category px-3">{category}</p>
           <div className="mt-5">
-            <AnimatedButton/>
+            <AnimatedButton href={link}/>
           </div>
         </div>
         <div
@@ -121,7 +118,7 @@ const HorizontalScrollSection = () => {
         </div>
 
         <h1 className="text-5xl xl:text-[150px] text-center special-font uppercase">
-            WORK
+          WORK
         </h1>
 
         <div className="w-full flex items-center justify-center gap-3 lg:justify-between xl:px-20">
@@ -140,39 +137,72 @@ const HorizontalScrollSection = () => {
         ref={component}
         id="project"
       >
-        <img src="/images/dots.png" className="dark:hidden absolute mt-[340px] opacity-45 select-none" alt="dots" /> 
-        <img src="/images/white-dots.png" className="hidden dark:flex absolute mt-[140px]  opacity-25 select-none" alt="dots" />
+        <img
+          src="/images/dots.png"
+          className="dark:hidden absolute mt-[340px] opacity-45 select-none"
+          alt="dots"
+        />
+        <img
+          src="/images/white-dots.png"
+          className="hidden dark:flex absolute mt-[140px]  opacity-25 select-none"
+          alt="dots"
+        />
 
-        <img src="/images/dots.png" className="dark:hidden absolute left-[60%] top-[80%] opacity-45 select-none" alt="dots" /> 
-        <img src="/images/white-dots.png" className="hidden dark:flex absolute left-[60%] top-[80%] opacity-25 select-none" alt="dots" />
+        <img
+          src="/images/dots.png"
+          className="dark:hidden absolute left-[60%] top-[80%] opacity-45 select-none"
+          alt="dots"
+        />
+        <img
+          src="/images/white-dots.png"
+          className="hidden dark:flex absolute left-[60%] top-[80%] opacity-25 select-none"
+          alt="dots"
+        />
 
-        <img src="/images/dots.png" className="dark:hidden absolute  top-1/2 opacity-45 select-none" alt="dots" /> 
-        <img src="/images/white-dots.png" className="hidden dark:flex absolute top-1/2 opacity-25 select-none" alt="dots" />
+        <img
+          src="/images/dots.png"
+          className="dark:hidden absolute  top-1/2 opacity-45 select-none"
+          alt="dots"
+        />
+        <img
+          src="/images/white-dots.png"
+          className="hidden dark:flex absolute top-1/2 opacity-25 select-none"
+          alt="dots"
+        />
 
-        <img src="/images/dots.png" className="dark:hidden absolute left-1/2 top-1/3 opacity-45 select-none" alt="dots" /> 
-        <img src="/images/white-dots.png" className="hidden dark:flex absolute left-1/2 top-1/3 opacity-25 select-none" alt="dots" />
+        <img
+          src="/images/dots.png"
+          className="dark:hidden absolute left-1/2 top-1/3 opacity-45 select-none"
+          alt="dots"
+        />
+        <img
+          src="/images/white-dots.png"
+          className="hidden dark:flex absolute left-1/2 top-1/3 opacity-25 select-none"
+          alt="dots"
+        />
 
         <div className="gallery" id="main-container" ref={slider}>
           {galleryData.map((image, index) => (
-            <GalleryItem
-              key={image.id}
-              index={index}
-              {...image}
-            />
+            <GalleryItem key={image.id} index={index} {...image} />
           ))}
         </div>
       </section>
 
-
       <section className="flex flex-col gap-20 lg:hidden">
-      {galleryData.map((image, index) => (
-            <div className="flex flex-col gap-5" key={index}>
-              <img src={image.src} alt={image.title}/>
-              <h1 className="text-4xl font-bold gallery-info-title">{image.title}</h1>
-              <Button><a className="py-5" href={image.link}>Learn More</a></Button>
-              <p className="text-sm">{image.category}</p>
-            </div>
-          ))}
+        {galleryData.map((image, index) => (
+          <div className="flex flex-col gap-5" key={index}>
+            <img src={image.src} alt={image.title} />
+            <h1 className="text-4xl font-bold gallery-info-title">
+              {image.title}
+            </h1>
+            <Button variant="outline">
+              <Link className="py-5" href={image.link}>
+                Learn More
+              </Link>
+            </Button>
+            <p className="text-sm">{image.category}</p>
+          </div>
+        ))}
       </section>
     </section>
   );

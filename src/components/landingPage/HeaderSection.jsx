@@ -44,7 +44,7 @@ const HeaderSection = () => {
         <h1
           ref={headerTextRef}
           id="headerText"
-          className="uppercase text-5xl md:text-6xl 2xl:text-[150px] leading-none special-font"
+          className="uppercase text-5xl md:text-7xl xl:text-9xl special-font leading-7"
         >
           <span className="flex justify-center items-center gap-3 special-font">
             Cre
@@ -53,8 +53,8 @@ const HeaderSection = () => {
               className="w-[50px] lg:w-[100px] 2xl:w-[150px] h-auto rounded-t-full rounded-r-full"
             />
             ative
-          </span>{" "}
-          <span className="special-font">Frontend developer Bulgaria</span>
+          </span>
+          <span className="special-font">Frontend developer <br/> Bulgaria</span>
           <StarShape className="h-[50px] w-full mt-5 md:h-[100px] mx-auto" />
         </h1>
       </ScrollParallax>
