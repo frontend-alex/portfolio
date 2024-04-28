@@ -62,7 +62,7 @@ const ForthSection = () => {
             <p
               id="para2"
               ref={ref}
-              className={cn({ "text-4xl opacity-0 is-reveal": reveal })}
+              className={cn({ "text-4xl opacity-0 is-reveal uppercase": reveal })}
             >
               "The path i had to walk through was hard and full of{" "}
               <strong>bugs</strong>, but somehow i managed to{" "}
