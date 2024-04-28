@@ -45,7 +45,7 @@ const FirstSection = () => {
   }, [reveal]);
 
   return (
-    <section className="relative flex flex-col md:flex-row justify-between items-center gap-10">
+    <section id="about-session" className="relative flex flex-col md:flex-row justify-between items-center gap-10">
       <img
         src="/images/dots.png"
         className="dark:hidden absolute left-[-25%] opacity-45 select-none"
@@ -77,7 +77,7 @@ const FirstSection = () => {
             </strong>
           </p>
 
-          <div className="flex-end">
+          <div className="flex justify-start md:justify-end items-center">
             <div className="text-underline" id="hoverElement">
               <div className="flex items-center gap-3">
                 <Link href="">Learn More </Link>

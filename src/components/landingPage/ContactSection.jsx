@@ -4,12 +4,12 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="my-20 border-0 lg:border border-[#0F0F10] dark:border-[#252525] rounded-md flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
+    <section id="contact-section" className="my-20 border-0 lg:border border-[#0F0F10] dark:border-[#252525] rounded-md flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
       <div className="text-white dark:text-black w-full bg-[#0F0F10] dark:bg-[#F5F5F5] px-3 overflow-hidden">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3 px-10 mt-10">
             <h1 className="text-xl font-bold">AI</h1>
-            <h1 className="">Aleksander Ivanov</h1>
+            <h1 className="">Aleksandar Ivanov</h1>
           </div>
           <h1 className="p-10 special-font text-6xl">
             I'd love <br className="hidden md:flex" />
@@ -63,7 +63,7 @@ const ContactSection = () => {
             <a href="#" className="cursor-pointer" id="hoverElement"><Github/></a>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 
