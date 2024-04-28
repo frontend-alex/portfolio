@@ -1,6 +1,5 @@
 "use client";
 
-import StarShape from "@svgs/StarShape";
 
 import HorizontalScrollSection from "@components/landingPage/HorizontalScrollSection";
 import LanguagesSection from "@components/landingPage/LanguagesSection";
@@ -21,7 +20,9 @@ export default function Home() {
         <HorizontalScrollSection />
 
         <LanguagesSection />
+
       </div>
+
       <ForthSection />
 
       <div className="max-w-7xl mx-auto flex flex-col gap-56">

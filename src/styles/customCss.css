@@ -203,6 +203,10 @@
   height: 250px;
 }
 
+.lang-card-container .lang-card{
+  opacity: 0;
+}
+
 #cards:hover > .card::after {
   opacity: 1;
 }
@@ -491,4 +495,9 @@
   #headerText {
     line-height: 5rem;
   }
+
 }
+
+
+
+

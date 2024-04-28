@@ -23,7 +23,6 @@ const FirstSection = () => {
 
   useEffect(() => {
     if (onScreen) setReveal(onScreen);
-    console.log(reveal);
   }, [onScreen]);
 
   useEffect(() => {
@@ -65,7 +64,7 @@ const FirstSection = () => {
           <p
             id="para"
             ref={ref}
-            className={cn({ "text-4xl opacity-0 is-reveal": reveal })}
+            className={cn({ "text-4xl leading-1 opacity-0 is-reveal": reveal })}
           >
             IN MY <strong>{new Date().getFullYear() - 2018}</strong> YEARS OF{" "}
             <strong>PROGRAMMING</strong> I TURN IDEAS INTO{" "}

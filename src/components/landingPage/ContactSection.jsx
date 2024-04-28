@@ -15,7 +15,9 @@ const ContactSection = () => {
             I'd love <br className="hidden md:flex" />
             to hear from you
           </h1>
-          <Circle />
+          <div className="hidden lg:flex">
+            <Circle />
+          </div>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-3 text-center w-full opacity-50 my-10">
             <h1 className="font-bold">AI</h1>
             <p className="text-sm">Privacy Policy • Modern Day Statement</p>

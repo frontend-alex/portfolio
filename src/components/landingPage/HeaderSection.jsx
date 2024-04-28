@@ -39,31 +39,61 @@ const HeaderSection = () => {
   }, [reveal]);
 
   return (
-    <header className="select-none min-h-screen flex items-center text-center relative">
-      <ScrollParallax>
-        <h1
-          ref={headerTextRef}
-          id="headerText"
-          className="uppercase text-5xl md:text-7xl xl:text-9xl special-font leading-7"
-        >
-          <span className="flex justify-center items-center gap-3 special-font">
-            Cre
-            <img
-              src="/images/statue.jpg"
-              className="w-[50px] lg:w-[100px] 2xl:w-[150px] h-auto rounded-t-full rounded-r-full"
-            />
-            ative
-          </span>
-          <span className="special-font">Frontend developer <br/> Bulgaria</span>
-          <StarShape className="h-[50px] w-full mt-5 md:h-[100px] mx-auto" />
-        </h1>
-      </ScrollParallax>
+    <>
+      <header className="select-none min-h-screen flex lg:hidden justify-center items-center text-center relative">
+          <h1
+            ref={headerTextRef}
+            id="headerText"
+            className="uppercase text-5xl md:text-7xl xl:text-9xl special-font leading-7"
+          >
+            <span className="flex justify-center items-center gap-3 special-font">
+              Cre
+              <img
+                src="/images/statue.jpg"
+                className="w-[50px] lg:w-[100px] 2xl:w-[150px] h-auto rounded-t-full rounded-r-full"
+              />
+              ative
+            </span>
+            <span className="special-font">
+              Frontend developer, <br /> Bulgaria.
+            </span>
+            <StarShape className="h-[50px] w-full mt-5 md:h-[100px] mx-auto" />
+          </h1>
 
-      <img
-        className="w-full lg:w-2/3 object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50 z-[-1] dark:opacity-5"
-        src="/images/header-bg.png"
-      />
-    </header>
+        <img
+          className="w-full lg:w-2/3 object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50 z-[-1] dark:opacity-5"
+          src="/images/header-bg.png"
+        />
+      </header>
+
+      <header className="select-none min-h-screen hidden lg:flex justify-center items-center text-center relative">
+        <ScrollParallax>
+          <h1
+            ref={headerTextRef}
+            id="headerText"
+            className="uppercase text-5xl md:text-7xl xl:text-9xl special-font leading-7"
+          >
+            <span className="flex justify-center items-center gap-3 special-font">
+              Cre
+              <img
+                src="/images/statue.jpg"
+                className="w-[50px] lg:w-[100px] 2xl:w-[150px] h-auto rounded-t-full rounded-r-full"
+              />
+              ative
+            </span>
+            <span className="special-font">
+              Frontend developer, <br /> Bulgaria.
+            </span>
+            <StarShape className="h-[50px] w-full mt-5 md:h-[100px] mx-auto" />
+          </h1>
+        </ScrollParallax>
+
+        <img
+          className="w-full lg:w-2/3 object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50 z-[-1] dark:opacity-5"
+          src="/images/header-bg.png"
+        />
+      </header>
+    </>
   );
 };
 
