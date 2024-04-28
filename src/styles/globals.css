@@ -48,6 +48,18 @@
 @tailwind components;
 @tailwind utilities;
  
+.flex-center{
+  @apply flex justify-center items-center
+}
+
+.flex-between{
+  @apply flex justify-between items-center
+}
+
+.flex-end{
+  @apply flex justify-end items-center
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

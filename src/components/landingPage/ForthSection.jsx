@@ -42,37 +42,39 @@ const ForthSection = () => {
   }, [reveal]);
   return (
     <section className="relative overflow-hidden min-h-screen">
-      
       <img
-          src="/images/line.png"
-          className=" w-2/3 absolute -right-10 opacity-25 dark:opacity-[0.01] z-[-1] top-10 "
+        src="/images/line.png"
+        className=" w-2/3 absolute -right-10 opacity-25 dark:opacity-[0.01] z-[-1] top-10 "
       />
 
-      <div className="max-w-7xl mx-auto mt-56 flex flex-col md:flex-row justify-between items-center gap-10">
+      <div className="max-w-7xl px-5 2xl:px-0  mb-3 mx-auto mt-56 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="w-full">
-          <div className="bg-slate-200 dark:bg-[#2525251f] rounded-tl-[35%] rounded-br-[55%] rounded-bl-[35%] rounded-tr-[35%]">
+          <div className="bg-[#F8F9FA] dark:bg-[#2525251f] rounded-tl-[35%] rounded-br-[55%] rounded-bl-[35%] rounded-tr-[35%]">
             <img src="/images/statue-4.png" className="mx-auto" />
           </div>
         </div>
 
         <div className="w-full flex flex-col gap-5">
-          <p
-            id="para2"
-            ref={ref}
-            className={cn({ "text-4xl opacity-0 is-reveal": reveal })}
-          >
+          <div className="flex flex-col gap-3">
             <div className="flex items-center justify-center border border-black dark:border-[#252525] rounded-full p-5 w-[70px] h-[70px]">
               <span className="text-2xl special-font">04</span>
             </div>
-            IN MY <strong>{new Date().getFullYear() - 2018}</strong> YEARS OF{" "}
-            <strong>PROGRAMMING</strong> I TURN IDEAS INTO{" "}
-            <strong>AMAZING</strong> WEBSITES THROUGH THE WORLD OF{" "}
-            <strong>CREATIVE</strong> AND{" "}
-            <strong>
-              INTERACTIVE IDEAS & DESIGN.
-              <StarShape className="h-[20px] w-full mt-5 md:h-[50px] mx-auto" />
-            </strong>
-          </p>
+            <p
+              id="para2"
+              ref={ref}
+              className={cn({ "text-4xl opacity-0 is-reveal": reveal })}
+            >
+              "The path i had to walk through was hard and full of{" "}
+              <strong>bugs</strong>, but somehow i managed to{" "}
+              <strong>fixed</strong> them all."
+            </p>
+
+            <div className="flex-end">
+              <p className="text-right text-underline w-max">
+                - Aleksandar Ivanov
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

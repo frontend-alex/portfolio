@@ -19,27 +19,27 @@ import {
 const Navbar = () => {
   const { setTheme } = useTheme();
 
-  const navbarRef = React.useRef(null);
+  // const navbarRef = React.useRef(null);
 
-  React.useEffect(() => {
-    window.onscroll = function () {
-      navbarScroll();
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   window.onscroll = function () {
+  //     navbarScroll();
+  //   };
+  // }, []);
 
-  const navbarScroll = () => {
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      navbarRef.current.style.backdropFilter = "blur(16px)";
-    } else {
-      navbarRef.current.style.backdropFilter = "blur(16px)";
-    }
-  };
+  // const navbarScroll = () => {
+  //   if (
+  //     document.body.scrollTop > 50 ||
+  //     document.documentElement.scrollTop > 50
+  //   ) {
+  //     navbarRef.current.style.backdropFilter = "blur(16px)";
+  //   } else {
+  //     navbarRef.current.style.backdropFilter = "blur(16px)";
+  //   }
+  // };
 
   return (
-    <div className="fixed w-full z-[1000] navbar" ref={navbarRef}>
+    <div className="fixed w-full z-[1000] navbar">
       <div className="max-w-7xl mx-auto py-5 flex items-center justify-between px-5 xl:px-0">
         <h1 className="font-bold">AI.</h1>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
             <Button
               variant="outline"
               size="icon"
-              className="bg-transparent border border-[#252525] outline-none"
+              className="border border-[#252525] outline-none"
             >
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
