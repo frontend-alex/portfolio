@@ -44,13 +44,13 @@ const ForthSection = () => {
     <section className="relative overflow-hidden min-h-screen">
       <img
         src="/images/line.png"
-        className=" w-2/3 absolute -right-10 opacity-25 dark:opacity-[0.01] z-[-1] top-10 "
+        className="w-full absolute -right-10 opacity-25 dark:opacity-[0.01] z-[-1] md:top-10"
       />
 
       <div className="max-w-7xl px-5 2xl:px-0  mb-3 mx-auto mt-56 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="w-full">
           <div className="bg-[#F8F9FA] dark:bg-[#2525251f] rounded-tl-[35%] rounded-br-[55%] rounded-bl-[35%] rounded-tr-[35%]">
-            <img src="/images/statue-4.png" className="mx-auto" />
+            <img src="/images/statue-4.png" className="mx-auto opacity-50"  />
           </div>
         </div>
 
