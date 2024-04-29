@@ -50,7 +50,7 @@ const ForthSection = () => {
       <div className="max-w-7xl px-5 2xl:px-0  mb-3 mx-auto mt-56 flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="w-full">
           <div className="bg-[#F8F9FA] dark:bg-[#2525251f] rounded-tl-[35%] rounded-br-[55%] rounded-bl-[35%] rounded-tr-[35%]">
-            <img src="/images/statue-4.png" className="mx-auto opacity-50"  />
+            <img src="/images/statue-4.png" className="mx-auto"/>
           </div>
         </div>
 
