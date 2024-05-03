@@ -10,7 +10,7 @@ import ContactSection from "@components/landingPage/ContactSection";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <HeaderSection />
       {/* end of header*/}
       <div className="max-w-7xl px-5 2xl:px-0 mx-auto flex flex-col gap-56">

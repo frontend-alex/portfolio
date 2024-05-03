@@ -27,8 +27,8 @@ const page = () => {
             const { id, title, date } = post;
             const formatedDate = getFormattedDate(date);
             return (
-              <>
-                <div className="border-b dark:border-[#252525] pb-3 ">
+              <React.Fragment key={id}>
+                <div  className="border-b dark:border-[#252525] pb-3 ">
                   <Link
                     className="flex justify-start items-start flex-col lg:flex-row lg:items-center gap-5"
                     // href={`/blog/${id}`}
@@ -39,7 +39,7 @@ const page = () => {
                     <h1 className="text-xl lg:text-2xl underline">{title}</h1>
                   </Link>
                 </div>
-              </>
+              </React.Fragment>
             );
           })}
         </div>

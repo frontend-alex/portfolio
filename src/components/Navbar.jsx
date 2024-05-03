@@ -57,7 +57,7 @@ const Navbar = () => {
         >
           {navbarLinks.map((link, id) => (
             <li key={id}>
-              <Link class={path === link.path ? 'text-underline ': ''} href={link.path}>{link.name}.</Link>
+              <Link className={path === link.path ? 'text-underline ': ''} href={link.path}>{link.name}.</Link>
             </li>
           ))}
         </ul>
@@ -108,7 +108,7 @@ const Navbar = () => {
 
               <ul className="flex flex-col gap-3">
                 {navbarLinks.map((link, id) => (
-                  <li key={id}><Link href={link.path}>{link.name}.</Link></li>
+                  <li key={id}><Link className={path === link.path ? 'text-underline ': ''} href={link.path}>{link.name}.</Link></li>
                 ))}
               </ul>
             </div>

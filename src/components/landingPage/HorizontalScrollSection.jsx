@@ -15,7 +15,7 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const GalleryItem = ({ src, category, title, link }) => {
+export const GalleryItem = ({ src, category, title, link, id }) => {
   const ref = useRef(null);
 
   const onScreen = useOnScreen(ref, 0.5);
@@ -24,6 +24,7 @@ export const GalleryItem = ({ src, category, title, link }) => {
     <div
       className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
       ref={ref}
+      key={id}
     >
       <div></div>
       <div className={"gallery-item"}>
@@ -200,7 +201,7 @@ const HorizontalScrollSection = () => {
 
         <div className="gallery" id="main-container" ref={slider}>
           {galleryData.map((image, index) => (
-            <GalleryItem key={image.id} index={index} {...image} />
+            <GalleryItem key={index} index={index} {...image} />
           ))}
         </div>
       </section>

@@ -15,7 +15,7 @@ const AnimatedButton = ({ href }) => {
         >
           <path
             id="link-circle"
-            class="link__path"
+            className="link__path"
             d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
             stroke="none"
             fill="none"

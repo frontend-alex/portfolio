@@ -20,7 +20,6 @@ const ForthSection = () => {
 
   useEffect(() => {
     if (onScreen) setReveal(onScreen);
-    console.log(reveal);
   }, [onScreen]);
 
   useEffect(() => {
