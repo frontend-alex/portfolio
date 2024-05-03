@@ -1,6 +1,20 @@
 .navbar {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  top: 0;
+}
+
+.sidebar{
+  width: 100%;
+  left: -100%;
+  position: fixed;
+  min-height: 100vh;
+  top: 0;
+  transition: .4s;
+}
+
+.sidebar.active{
+  left: 0;
 }
 
 .gallery-wrap {

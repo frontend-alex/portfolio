@@ -7,7 +7,7 @@ import HeaderSection from "@components/landingPage/HeaderSection";
 import FirstSection from "@components/landingPage/FirstSection";
 import ForthSection from "@components/landingPage/ForthSection";
 import ContactSection from "@components/landingPage/ContactSection";
-import FooterSection from "@components/landingPage/FooterSection";
+import FooterSection from "@components/FooterSection";
 
 export default function Home() {
   return (

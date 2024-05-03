@@ -5,17 +5,19 @@ import SplitText from "@lib/SpitText";
 import StarShape from "@svgs/StarShape";
 import gsap from "gsap";
 
-import { accordionData } from "@constants/Data";
+import { accordionData, accordionDataFull } from "@constants/Data";
 
 import "react-circular-progressbar/dist/styles.css";
 import { Progress } from "../ui/progress";
-import { Plus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 
 const LanguagesSection = () => {
   const langugagesText = useRef(null);
 
   const onScreen = useOnScreen(langugagesText, 0.5);
   const [reveal, setReveal] = useState(false);
+
+  const [toggleCards, setToggleCards] = useState(false);
 
   useEffect(() => {
     if (onScreen) setReveal(onScreen);
@@ -55,12 +57,12 @@ const LanguagesSection = () => {
         opacity: 1,
         ease: "sine.in",
         scrollTrigger: {
-          trigger: '#cards',
+          trigger: "#cards",
           toggleActions: "restart none none reset",
         },
       });
     }
-  }, [reveal]);
+  }, [reveal, toggleCards]);
 
   useEffect(() => {
     document.getElementById("cards").onmousemove = (e) => {
@@ -101,43 +103,89 @@ const LanguagesSection = () => {
         </div>
       </div>
 
-      <div
-        id="cards"
-        className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mt-20 lang-card-container"
-      >
-        {accordionData.map((card, id) => {
-          const { img, name, color, value } = card;
-          return (
-            <div
-              key={id}
-              className="card lang-card relative bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255, 0.1)] rounded-lg w-full p-5"
-            >
-              <div className="card-content flex flex-col gap-5 justify-center items-center dark:bg-[rgb(23,23,23)]">
-                <img
-                  className="h-[100px] w-[100px] mx-auto object-contain"
-                  src={img}
-                  alt={name}
-                />
-                <h1 className="text-xl font-bold">{name}</h1>
-                <div className="flex items-center justify-between gap-3 w-full">
-                  <Progress
-                    value={value}
-                    color={color}
-                    className="w-full h-2 bg-[#e6e6e6] dark:bg-[#252525]"
+      {!toggleCards ? (
+        <div
+          id="cards"
+          className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mt-20 lang-card-container"
+        >
+          {accordionData.map((card, id) => {
+            const { img, name, color, value } = card;
+            return (
+              <div
+                key={id}
+                className="card lang-card relative bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255, 0.1)] rounded-lg w-full p-5"
+              >
+                <div className="card-content flex flex-col gap-5 justify-center items-center dark:bg-[rgb(23,23,23)]">
+                  <img
+                    className="h-[100px] w-[100px] mx-auto object-contain"
+                    src={img}
+                    alt={name}
                   />
-                  <p>{value}%</p>
+                  <h1 className="text-xl font-bold">{name}</h1>
+                  <div className="flex items-center justify-between gap-3 w-full">
+                    <Progress
+                      value={value}
+                      color={color}
+                      className="w-full h-2 bg-[#e6e6e6] dark:bg-[#252525]"
+                    />
+                    <p>{value}%</p>
+                  </div>
                 </div>
               </div>
+            );
+          })}
+          <div
+            onClick={() => setToggleCards((prev) => !prev)}
+            className="lang-card card relative bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255, 0.1)] cursor-pointer rounded-lg w-full p-5"
+          >
+            <div className="card-content flex flex-col gap-0 justify-center items-center dark:bg-[rgb(23,23,23)]">
+              <h1 className="text-xl font-bold">See All</h1>
+              <Plus size={60} />
             </div>
-          );
-        })}
-        <div className="lang-card card relative bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255, 0.1)] rounded-lg w-full p-5">
-          <div className="card-content flex flex-col gap-0 justify-center items-center dark:bg-[rgb(23,23,23)]">
-            <h1 className="text-xl font-bold">See All</h1>
-            <Plus size={60} />
           </div>
         </div>
-      </div>
+      ) : (
+        <div
+          id="cards"
+          className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mt-20 lang-card-container"
+        >
+          {accordionDataFull.map((card, id) => {
+            const { img, name, color, value } = card;
+            return (
+              <div
+                key={id}
+                className="card lang-card relative bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255, 0.1)] rounded-lg w-full p-5"
+              >
+                <div className="card-content flex flex-col gap-5 justify-center items-center dark:bg-[rgb(23,23,23)]">
+                  <img
+                    className="h-[100px] w-[100px] mx-auto object-contain"
+                    src={img}
+                    alt={name}
+                  />
+                  <h1 className="text-xl font-bold">{name}</h1>
+                  <div className="flex items-center justify-between gap-3 w-full">
+                    <Progress
+                      value={value}
+                      color={color}
+                      className="w-full h-2 bg-[#e6e6e6] dark:bg-[#252525]"
+                    />
+                    <p>{value}%</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          <div
+            onClick={() => setToggleCards((prev) => !prev)}
+            className="lang-card card relative bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255, 0.1)] cursor-pointer rounded-lg w-full p-5"
+          >
+            <div className="card-content flex flex-col gap-0 justify-center items-center dark:bg-[rgb(23,23,23)]">
+              <h1 className="text-xl font-bold">Show Less</h1>
+              <Minus size={60} />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

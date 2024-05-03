@@ -80,10 +80,9 @@ const Cursor = () => {
           cursor: "none"
         })
         gsap.to("#second-cursor", {
-          display: 'none',
+          opacity: '0',
         })
         gsap.to("#main-curosr", {
-          // duration: 0.3,
           width: 70,
           height: 70,
           position:'absolute',
@@ -109,7 +108,7 @@ const Cursor = () => {
           cursor:"default"
         })
         gsap.to("#second-cursor", {
-          display: 'block'
+          opacity: '1'
         })
         gsap.to("#cursor-icon", {
           display: 'none',

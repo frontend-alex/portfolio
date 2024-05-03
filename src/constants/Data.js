@@ -12,12 +12,8 @@ export const navbarLinks = [
     path: "#contact-section",
   },
   {
-    name: "More",
-    path: "/",
-  },
-  {
     name: "Blog",
-    path: "/",
+    path: "/blog",
   },
 ];
 
@@ -54,62 +50,154 @@ export const accordionData = [
     img: "/images/logos/html.png",
     color: "#E54D26",
     value: 100,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "CSS3",
     img: "/images/logos/css.png",
     color: "#379AD6",
     value: 95,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "Tailwind",
     img: "/images/logos/tailwind.png",
     color: "#38BDF8",
     value: 100,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "Javascript",
     img: "/images/logos/javascript.png",
     color: "#F0DC4E",
     value: 90,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "Typescript",
     img: "/images/logos/ts.png",
     color: "#0288D1",
     value: 70,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "ReactJS",
     img: "/images/logos/react.png",
     color: "#00D8FF",
     value: 90,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
+   text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "NodeJS",
     img: "/images/logos/node.png",
     color: "#539D43",
     value: 75,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "Express",
     img: "/images/logos/expres.png",
     color: "#828282",
     value: 70,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
   },
   {
     name: "NextJS",
     img: "/images/logos/nextjs.png",
     color: "#000000",
     value: 80,
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit blanditiis iusto fugiat error pariatur corporis sint illum ipsa aut maxime!",
+  },
+];
+
+
+export const accordionDataFull = [
+  {
+    name: "HTML5",
+    img: "/images/logos/html.png",
+    color: "#E54D26",
+    value: 100,
+  },
+  {
+    name: "CSS3",
+    img: "/images/logos/css.png",
+    color: "#379AD6",
+    value: 95,
+  },
+  {
+    name: "Tailwind",
+    img: "/images/logos/tailwind.png",
+    color: "#38BDF8",
+    value: 100,
+  },
+  {
+    name: "Javascript",
+    img: "/images/logos/javascript.png",
+    color: "#F0DC4E",
+    value: 90,
+  },
+  {
+    name: "Typescript",
+    img: "/images/logos/ts.png",
+    color: "#0288D1",
+    value: 70,
+  },
+  {
+    name: "ReactJS",
+    img: "/images/logos/react.png",
+    color: "#00D8FF",
+    value: 90,
+  },
+  {
+    name: "React Native (Expo)",
+    img: "/images/logos/expo.png",
+    color: "#00D8FF",
+    value: 60,
+  },
+  {
+    name: "NextJS",
+    img: "/images/logos/nextjs.png",
+    color: "#000000",
+    value: 80,
+  },
+  {
+    name: "NodeJS",
+    img: "/images/logos/node.png",
+    color: "#539D43",
+    value: 75,
+  },
+  {
+    name: "Express",
+    img: "/images/logos/expres.png",
+    color: "#828282",
+    value: 70,
+  },
+  {
+    name: "MongoDb",
+    img: "/images/logos/mongodb.png",
+    color: "#828282",
+    value: 80,
+  },
+  {
+    name: "Prisma",
+    img: "/images/logos/prisma.png",
+    color: "#828282",
+    value: 60,
+  },
+  {
+    name: "Git",
+    img: "/images/logos/git.png",
+    color: "#828282",
+    value: 100,
+  },
+  {
+    name: "Github",
+    img: "/images/logos/github.png",
+    color: "#828282",
+    value: 100,
+  },
+  {
+    name: "Docker",
+    img: "/images/logos/docker.png",
+    color: "#828282",
+    value: 70,
+  },
+  {
+    name: "Python",
+    img: "/images/logos/python.png",
+    color: "#828282",
+    value: 60,
   },
 ];

@@ -36,9 +36,9 @@ const FooterSection = () => {
       <div className="footer-links">
           <span>© Me Inc. All Rights Reserved {yy}</span>
           <div className="icons" id="hoverElement"> 
-            <Instagram className="icon"/>
-            <Github className="icon"/>
-            <Linkedin className="icon"/>
+            <Link href={'https://www.instagram.com/yourrfavalex/'}><Instagram className="icon"/></Link>
+            <Link href={'https://github.com/japsap'}><Github className="icon"/></Link>
+            <Link href={'https://www.linkedin.com/in/aleksander-ivanov-0356a8274/'}><Linkedin className="icon"/></Link>
           </div>
       </div>
     </div>

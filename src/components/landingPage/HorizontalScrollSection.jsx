@@ -11,17 +11,11 @@ import StarShape from "@svgs/StarShape";
 import { Button } from "../ui/button";
 import AnimatedButton from "../ui/animated-button";
 
-
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const GalleryItem = ({
-  src,
-  category,
-  title,
-  link,
-}) => {
+export const GalleryItem = ({ src, category, title, link }) => {
   const ref = useRef(null);
 
   const onScreen = useOnScreen(ref, 0.5);
@@ -37,7 +31,7 @@ export const GalleryItem = ({
           <h1 className={`gallery-info-title mix-blend-difference`}>{title}</h1>
           <p className="gallery-info-category px-3">{category}</p>
           <div className="mt-5">
-            <AnimatedButton href={link}/>
+            <AnimatedButton href={link} />
           </div>
         </div>
         <div
@@ -125,10 +119,18 @@ const HorizontalScrollSection = () => {
           <div className="hidden md:flex items-center justify-center border border-black dark:border-[#252525] rounded-full p-5 w-[70px] h-[70px]">
             <span className="text-2xl special-font">02</span>
           </div>
-          <h1 className="text-2xl md:text-5xl flex items-center mx-auto lg:mx-0 gap-5 special-font uppercase">
-            <span className="text-stone-400 text-[10px] w-full leading-3">(low end projects)</span>Projects{" "}
-            <StarShape className="h-[20px] w-full mt-5 md:h-[50px] mx-auto" />
-          </h1>
+          <div className="flex flex-col justify-end items-end gap-3">
+            <h1 className="text-2xl md:text-5xl flex items-start mx-auto lg:mx-0 gap-5 special-font uppercase">
+              Projects{" "}
+              <StarShape className="h-[20px] w-max mt-5 md:h-[50px]"/>
+            </h1>
+            <h1 className="special-font text-2xl uppercase">
+              Part of the public projects I've worked on.
+            </h1>
+            <span className="text-stone-400 text-[12px] w-full leading-3">
+              (low end projects)
+            </span>
+          </div>
         </div>
       </div>
 
