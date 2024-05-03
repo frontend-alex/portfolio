@@ -100,10 +100,10 @@ const Navbar = () => {
             <div className="cursor-pointer" onClick={toggleMobileNav}>
               <AlignJustify/>
             </div>
-            <div className="bg-white dark:bg-[#0A0A0A] sidebar flex flex-col gap-5 p-5" ref={mobileBarRef}>
+            <div onClick={toggleMobileNav} className="bg-white dark:bg-[#0A0A0A] sidebar flex flex-col gap-5 p-5" ref={mobileBarRef}>
               <div className="flex justify-between items-center">
                 <h1 className="font-bold">AI.</h1>
-                <X onClick={toggleMobileNav} className="text-red-600"/>
+                <X className="text-red-600"/>
               </div>
 
               <ul className="flex flex-col gap-3">

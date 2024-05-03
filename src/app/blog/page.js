@@ -30,7 +30,8 @@ const page = () => {
                 <div className="border-b dark:border-[#252525] pb-3 ">
                   <Link
                     className="flex justify-start items-start flex-col lg:flex-row lg:items-center gap-5"
-                    href={`/blog/${id}`}
+                    // href={`/blog/${id}`}
+                    href={'#'}
                     id="hoverElement"
                   >
                     <p className="text-stone-400">• {formatedDate}</p>

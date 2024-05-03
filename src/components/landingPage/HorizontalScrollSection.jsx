@@ -120,7 +120,7 @@ const HorizontalScrollSection = () => {
             <span className="text-2xl special-font">02</span>
           </div>
           <div className="flex flex-col justify-end items-end gap-3 w-full lg:w-max">
-            <h1 className="text-2xl md:text-5xl flex items-start mx-auto lg:mx-0 gap-5 special-font uppercase">
+            <h1 className="text-2xl md:text-5xl w-max lg:w-full flex items-start mx-auto lg:mx-0 gap-5 special-font uppercase">
               Projects{" "}
               <StarShape className="h-[20px] w-max mt-5 md:h-[50px]"/>
             </h1>
