@@ -1,9 +1,12 @@
+import "@styles/globals.css";
+
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@providers/ThemeProvider";
+
+import Cursor from "@components/ui/cursor";
+import FooterSection from "@components/FooterSection";
 import Navbar from "@components/Navbar";
 
-import "@styles/globals.css";
-import Cursor from "@components/ui/cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +28,7 @@ export default function RootLayout({ children }) {
           <Cursor />
           <main>{children}</main>
         </ThemeProvider>
+      <FooterSection />
       </body>
     </html>
   );

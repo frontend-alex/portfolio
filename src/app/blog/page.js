@@ -1,3 +1,4 @@
+import FooterSection from "@components/FooterSection";
 import getFormattedDate from "@lib/getFormattedDate";
 import { getSortedPostsData } from "@lib/posts";
 import Link from "next/link";
@@ -21,7 +22,7 @@ const page = () => {
 
         <h1 className="text-3xl lg:text-5xl font-bold">Blog</h1>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 mb-[160px]">
           {posts.map((post) => {
             const { id, title, date } = post;
             const formatedDate = getFormattedDate(date);

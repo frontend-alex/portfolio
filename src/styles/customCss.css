@@ -216,6 +216,9 @@
 .card {
   height: 250px;
 }
+.project-cards{
+  opacity: 0;
+}
 
 .lang-card-container .lang-card{
   opacity: 0;

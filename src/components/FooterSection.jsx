@@ -11,7 +11,7 @@ const FooterSection = () => {
   
 
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div className="footer-data">
         <div className="box-1">
           <h1 className='text-2xl font-bold'>AI.</h1>
@@ -41,7 +41,7 @@ const FooterSection = () => {
             <Link href={'https://www.linkedin.com/in/aleksander-ivanov-0356a8274/'}><Linkedin className="icon"/></Link>
           </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

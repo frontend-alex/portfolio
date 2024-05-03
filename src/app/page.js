@@ -7,7 +7,6 @@ import HeaderSection from "@components/landingPage/HeaderSection";
 import FirstSection from "@components/landingPage/FirstSection";
 import ForthSection from "@components/landingPage/ForthSection";
 import ContactSection from "@components/landingPage/ContactSection";
-import FooterSection from "@components/FooterSection";
 
 export default function Home() {
   return (
@@ -28,8 +27,6 @@ export default function Home() {
       <div className="max-w-7xl mx-auto flex flex-col gap-56">
         <ContactSection />
       </div>
-
-      <FooterSection />
     </div>
   );
 }

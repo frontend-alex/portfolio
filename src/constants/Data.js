@@ -5,7 +5,7 @@ export const navbarLinks = [
   },
   {
     name: "About",
-    path: "#about-session",
+    path: "/about",
   },
   {
     name: "Contact",

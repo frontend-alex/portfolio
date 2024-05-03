@@ -100,6 +100,22 @@ const HorizontalScrollSection = () => {
     }
   }, [reveal]);
 
+  useEffect(() => {
+    if (reveal) {
+      gsap.to(".project-cards", {
+        duration: 1,
+        stagger: 0.3,
+        delay: 0.5,
+        opacity: 1,
+        ease: "sine.in",
+        scrollTrigger: {
+          trigger: "#projects",
+          toggleActions: "restart none none reset",
+        },
+      });
+    }
+  }, [reveal]);
+
   return (
     <section className="flex flex-col items-center gap-20">
       <div
@@ -119,15 +135,14 @@ const HorizontalScrollSection = () => {
           <div className="hidden md:flex items-center justify-center border border-black dark:border-[#252525] rounded-full p-5 w-[70px] h-[70px]">
             <span className="text-2xl special-font">02</span>
           </div>
-          <div className="flex flex-col justify-end items-end gap-3 w-full lg:w-max">
+          <div className="flex flex-col justify-end items-end gap-3">
             <h1 className="text-2xl md:text-5xl w-max lg:w-full flex items-start mx-auto lg:mx-0 gap-5 special-font uppercase">
-              Projects{" "}
-              <StarShape className="h-[20px] w-max mt-5 md:h-[50px]"/>
+              Projects <StarShape className="h-[20px] w-max mt-5 md:h-[50px]" />
             </h1>
-            <h1 className="special-font text-2xl uppercase">
+            <h1 className="special-font text-2xl uppercase hidden lg:flex">
               Part of the public projects I've worked on.
             </h1>
-            <span className="text-stone-400 text-[12px] w-full leading-3">
+            <span className="text-stone-400 text-[12px] w-full leading-3 hidden lg:flex">
               (low end projects)
             </span>
           </div>
@@ -190,9 +205,18 @@ const HorizontalScrollSection = () => {
         </div>
       </section>
 
-      <section className="flex flex-col gap-20 lg:hidden">
+      <div className="flex flex-col gap-3 lg:hidden">
+        <h1 className="special-font text-2xl uppercase">
+          Part of the public projects I've worked on.
+        </h1>
+        <span className="text-stone-400 text-[12px] w-full leading-3">
+          (low end projects)
+        </span>
+      </div>
+
+      <section id="projects" className="flex flex-col gap-20 lg:hidden">
         {galleryData.map((image, index) => (
-          <div className="flex flex-col gap-5" key={index}>
+          <div className="flex flex-col gap-5 project-cards" key={index}>
             <img src={image.src} alt={image.title} />
             <h1 className="text-4xl font-bold gallery-info-title">
               {image.title}
