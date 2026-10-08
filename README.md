@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+A personal portfolio and Markdown-backed blog built with Next.js.
 
-First, run the development server:
+## Current status
+
+Historical public portfolio implementation. This repository is not established as the source of the current aiivanov.dev deployment.
+
+## Features and implementation
+
+- Landing-page sections for personal introduction and work.
+- About and blog pages with individual Markdown article rendering.
+- GSAP/SplitType animation dependencies and reusable page components.
+- Theme and responsive styling with Tailwind CSS.
+
+## Technology
+
+Next.js 14.1, React 18, JavaScript, Tailwind CSS, GSAP, gray-matter, and Markdown rendering libraries.
+
+## Repository map
+
+| Path | Purpose |
+| --- | --- |
+| [src/app](<src/app>) | Page routes and layouts |
+| [src/app/page.js](<src/app/page.js>) | Landing-page composition |
+| [src/app/blog](<src/app/blog>) | Blog index and dynamic article route |
+| [blogposts](<blogposts>) | Markdown articles |
+| [package.json](<package.json>) | Scripts and dependencies |
+
+## Local setup
 
 ```bash
+git clone https://github.com/frontend-alex/portfolio.git
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Use a Node.js runtime compatible with the checked-in Next.js 14.1 dependencies and open http://localhost:3000. Edit the landing-page components for profile content and blogposts for articles. Keep article metadata consistent with the existing files and the blog route's parser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Verification
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The manifest provides the following checks:
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+These commands were checked against the manifest; builds, browser flows, and external services were not executed for this documentation update.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Manually check mobile layout, light/dark themes, article navigation, and animations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Limitations and next steps
 
-## Deploy on Vercel
+- This guide describes this checkout and does not claim the current live website is built from it.
+- Content and dependency versions reflect an older implementation; review them before reuse.
+- No project-specific automated test script is declared.
+- Accessibility and animation behavior require browser review.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Code review starting points
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [src/app/page.js](<src/app/page.js>)
+- [src/app/blog/[id]/page.js](<src/app/blog/[id]/page.js>)
+- [blogposts](<blogposts>)
